@@ -1,0 +1,35 @@
+{
+  "logs": [
+    {
+      "id": 4,
+      "message": "Engine room 405 on fire",
+      "attention": true,
+      "tech": "Timmy Micheal",
+      "date": "2020-04-20T07:42:43.131Z"
+    },
+    {
+      "id": 5,
+      "message": "Fixed the ball valve in tank",
+      "attention": false,
+      "tech": "Princess Omoh",
+      "date": "2020-04-19T21:33:28.154Z"
+    }
+  ],
+  "techs": [
+    {
+      "firstName": "Timmy",
+      "lastName": "Micheal",
+      "id": 1
+    },
+    {
+      "firstName": "Olayemi",
+      "lastName": "J",
+      "id": 2
+    },
+    {
+      "firstName": "Princess",
+      "lastName": "Omoh",
+      "id": 4
+    }
+  ]
+}
