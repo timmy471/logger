@@ -67,7 +67,7 @@ export const deleteLog = id => async dispatch => {
   try {
     dispatch({ type: SET_LOADING });
 
-    await axios.delete(url/id);
+    await axios.delete(`${url}/${id}`);
 
     dispatch({
       type: DELETE_LOG,
@@ -103,7 +103,7 @@ export const updateLog = log => async dispatch => {
       type: SET_LOADING
     });
 
-   const res = await axios.put(url/log.id, log);
+   const res = await axios.put(`${url}/${log.id}`, log);
    dispatch({
      type: UPDATE_LOG,
      payload: res.data

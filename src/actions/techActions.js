@@ -47,7 +47,7 @@ export const addTech = tech => async dispatch => {
 export const delTech = id => async dispatch => {
     try {
         
-        await axios.delete(url/id);
+        await axios.delete(`${url}/${id}`);
 
         dispatch({
             type: DELETE_TECH,
