@@ -7,7 +7,7 @@ export const getTechs = () => async dispatch => {
     try {
         
         
-        const res = await axios.get('/techs');
+        const res = await axios.get('https://forlogs-backeend.herokuapp.com/techs');
         
         dispatch({
             type: GET_TECHS,
@@ -15,7 +15,7 @@ export const getTechs = () => async dispatch => {
         })
 
     } catch (error) {
-        console.log(error)
+        
         dispatch({
             type: TECHS_ERROR,
             payload: error.statusText
@@ -27,15 +27,15 @@ export const getTechs = () => async dispatch => {
 export const addTech = tech => async dispatch => {
     try {
         
-        const res = await axios.post('/techs', tech);
-        console.log(res);
+        const res = await axios.post('https://forlogs-backeend.herokuapp.com/techs', tech);
+       
         dispatch({
             type: ADD_TECH,
             payload: res.data
         })
         
     } catch (error) {
-        console.log(error);
+      
         dispatch({
             type: TECHS_ERROR,
             payload: error.statusText
@@ -47,14 +47,14 @@ export const addTech = tech => async dispatch => {
 export const delTech = id => async dispatch => {
     try {
         
-        await axios.delete(`/techs/${id}`);
+        await axios.delete(`https://forlogs-backeend.herokuapp.com/techs/${id}`);
 
         dispatch({
             type: DELETE_TECH,
             payload: id
         })
     } catch (error) {
-        console.log(error);
+      
         dispatch({
             type: TECHS_ERROR,
             payload: error.statusText

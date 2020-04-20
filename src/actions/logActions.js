@@ -7,7 +7,7 @@ export const getLogs = () => async dispatch => {
   try {
     dispatch({ type: SET_LOADING });
 
-    const res = await axios.get("/logs");
+    const res = await axios.get("https://forlogs-backeend.herokuapp.com/logs");
 
     dispatch({
       type: GET_LOGS,
@@ -45,7 +45,7 @@ export const addLog = (log) => async dispatch => {
   try {
     dispatch({ type: SET_LOADING });
 
-    const res = await axios.post("/logs", log);
+    const res = await axios.post("https://forlogs-backeend.herokuapp.com/logs", log);
 
     dispatch({
       type: ADD_LOG,
@@ -65,7 +65,7 @@ export const deleteLog = id => async dispatch => {
   try {
     dispatch({ type: SET_LOADING });
 
-    await axios.delete(`logs/${id}`);
+    await axios.delete(`https://forlogs-backeend.herokuapp.comlogs/${id}`);
 
     dispatch({
       type: DELETE_LOG,
@@ -101,7 +101,7 @@ export const updateLog = log => async dispatch => {
       type: SET_LOADING
     });
 
-   const res = await axios.put(`/logs/${log.id}`, log);
+   const res = await axios.put(`https://forlogs-backeend.herokuapp.com/logs/${log.id}`, log);
    dispatch({
      type: UPDATE_LOG,
      payload: res.data
@@ -119,7 +119,7 @@ export const searchLogs = (text) => async dispatch => {
   try {
     dispatch({ type: SET_LOADING });
 
-    const res = await axios.get(`/logs?q=${text}`);
+    const res = await axios.get(`https://forlogs-backeend.herokuapp.com/logs?q=${text}`);
 
     dispatch({
       type: SEARCH_LOGS,
