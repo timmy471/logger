@@ -5,10 +5,11 @@ import axios from 'axios';
 //Get all logs
 const BASEURL = "https://forlogs.herokuapp.com"
 export const getLogs = () => async dispatch => {
+  console.log(BASEURL)
   try {
     dispatch({ type: SET_LOADING });
 
-    const res = await axios.get(`${BASEURL}/logs`);
+    const res = await axios.get('https://forlogs.herokuapp.com/logs');
 
     dispatch({
       type: GET_LOGS,
