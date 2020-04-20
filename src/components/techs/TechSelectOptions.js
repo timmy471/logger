@@ -6,10 +6,9 @@ const TechSelectOptions = ({ getTechs, tech: { techs } }) => {
 
 
   useEffect(() => {
-    getTechs();
-    
     //eslint-disable-next-line
-     
+    getTechs();
+    //eslint-disable-next-line  
   }, []);
 
   return (

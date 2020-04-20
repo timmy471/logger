@@ -1,4 +1,4 @@
-import { GET_TECHS, ADD_TECH, DELETE_TECH, SET_LOADING, TECHS_ERROR } from './types';
+import { GET_TECHS, ADD_TECH, DELETE_TECH, TECHS_ERROR } from './types';
 import axios from 'axios';
 
 const url = 'https://forlogs-backeend.herokuapp.com/techs';
