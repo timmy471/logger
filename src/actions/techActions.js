@@ -1,13 +1,13 @@
 import { GET_TECHS, ADD_TECH, DELETE_TECH, SET_LOADING, TECHS_ERROR } from './types';
 import axios from 'axios';
 
-
+const url = 'https://forlogs-backeend.herokuapp.com/techs';
 //get techs
 export const getTechs = () => async dispatch => {
     try {
         
         
-        const res = await axios.get('https://forlogs-backeend.herokuapp.com/techs');
+        const res = await axios.get(url);
         
         dispatch({
             type: GET_TECHS,
@@ -27,7 +27,7 @@ export const getTechs = () => async dispatch => {
 export const addTech = tech => async dispatch => {
     try {
         
-        const res = await axios.post('https://forlogs-backeend.herokuapp.com/techs', tech);
+        const res = await axios.post(url, tech);
        
         dispatch({
             type: ADD_TECH,
@@ -47,7 +47,7 @@ export const addTech = tech => async dispatch => {
 export const delTech = id => async dispatch => {
     try {
         
-        await axios.delete(`https://forlogs-backeend.herokuapp.com/techs/${id}`);
+        await axios.delete(url/id);
 
         dispatch({
             type: DELETE_TECH,
